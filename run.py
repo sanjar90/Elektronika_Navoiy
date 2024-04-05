@@ -1,4 +1,7 @@
-import uvicorn
+import subprocess
 
 if __name__ == "__main__":
-    uvicorn.run("main:app", host="127.0.0.1", reload=True)
+    files_to_run = ["sql_admin/admin.py", "main.py"]
+
+    for file in files_to_run:
+        subprocess.Popen(["python", file])
